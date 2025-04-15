@@ -13,7 +13,9 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' &&
     componentTagger(),
+    tailwindcss(),
   ].filter(Boolean),
+  base: process.env.VITE_BASE_PATH || "/jyotirlinga",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
